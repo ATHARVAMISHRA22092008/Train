@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:white">
+
+    <a-camera position="0 5 18"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets timeout="10000">
+      <img id="bg" src="./images/pexels-pixabay-258458.jpg">
+      <a-asset-item id="train" src="./models/Train (1).glb"></a-asset-item>
+    </a-assets>
+
+    <a-sky src="#bg"></a-sky>
+
+    <!-------------------------------------Plane----------------------------------------------->
+
+    <a-plane position="0 0 0" src="https://t3.ftcdn.net/jpg/02/95/32/58/360_F_295325870_p2zO53PLWLqjuU4gbSm8usViHGB25Lyl.jpg" height="50" width="150" rotation="-90 0 0"></a-plane>
+
+
+    <!--------------------------------------GLTF Models----------------------------------------------------------->
+
+    <!--train-->
+    <a-entity>
+      <a-entity position="0 0 5" rotation="0 90 0" scale="0.1 0.1 0.1" gltf-model="#train" shadow="cast: true;">
+      </a-entity>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>
